@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Had</title>
+</head>
+<body>
+    <div id="help-container">
+        <p>Ovládání:</p>
+        <ul>
+            <li>Použij <span class="control-key">W</span> pro pohyb nahoru.</li>
+            <li>Použij <span class="control-key">A</span> pro pohyb vlevo.</li>
+            <li>Použij <span class="control-key">S</span> pro pohyb dolu.</li>
+            <li>Použij <span class="control-key">D</span> pro pohyb vpravo.</li>
+        </ul>
+    </div> 
+    <div id="game-container">
+        <div id="snake"></div>
+        <div id="food"></div>
+        <div id="obstacles"></div>
+    </div>
+    <div id="score-container">
+        <p>Score: <span id="score">0</span></p>
+    </div>
+    <div id="name-input-container">
+        <label for="playerName">Zadej své jméno:</label>
+        <input type="text" id="playerName" />
+        <button id="startGameBtn" onclick="startGame()">Spustit hru</button>
+    </div>
+    <div id="leaderboard-container">
+        <h2>Žebříček</h2>
+        <ul id="leaderboard"></ul>
+    </div>
+    <button id="restartGameBtn" onclick="restartGame()">Restartovat hru</button>
+    <script src="script.js"></script>
+</body>
+</html>

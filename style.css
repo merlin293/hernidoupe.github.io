@@ -1,0 +1,178 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+#game-container {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
+
+.snake-segment {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+#snake div:first-child {
+    background-color: #8B4513;
+}
+
+#snake div:not(:first-child):not(:last-child) {
+    background-color: #3498db;
+}
+
+#snake div:last-child {
+    background-color: #001f3f;
+}
+
+#food, .obstacle {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+#food {
+    background-color: #e74c3c;
+}
+
+.obstacle {
+    background-color: #000;
+    border-radius: 5px;
+}
+
+#score-container {
+    margin-top: 20px;
+}
+
+#score {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #3498db;
+}
+
+#name-input-container {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+}
+
+label {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    display: block;
+}
+
+#playerName {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #3498db;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#leaderboard-container {
+    display: none;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+#leaderboard-container h2 {
+    font-size: 1.5em;
+    color: #000000;
+    margin: 0;
+    position: relative;
+    top: 0%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
+
+#leaderboard {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#leaderboard li {
+    padding: 8px;
+    margin-bottom: 8px;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+}
+
+#leaderboard li:nth-child(even) {
+    background-color: #e6e6e6;
+}
+
+#leaderboard li span {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+#startGameBtn {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px auto;
+}
+
+#startGameBtn:hover {
+    background-color: #2c3e50;
+}
+
+#help-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    max-width: 300px;
+}
+
+@media screen and (max-width: 600px) {
+    #help-container {
+        top: 20px;
+        right: 20px;
+        bottom: auto;
+        left: auto;
+        transform: none;
+        max-width: 90%;
+    }
+}
+
+#help-container p {
+    text-align: center;
+}
+
+.control-key {
+    font-weight: bold;
+    color: #3498db;
+}
+
+#index_ve_vyvoji p {
+    position: relative;
+    text-align: center;
+    color: #e74c3c;
+}
